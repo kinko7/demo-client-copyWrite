@@ -28,7 +28,7 @@ const TextForm = () => {
   }, [params.id]);
 
   const loadText = async (id) => {
-    const res = await fetch("https://demo-deploy0077.herokuapp/texts/" + id);
+    const res = await fetch("https://demo-deploy0077.herokuapp.com/texts/" + id);
     const data = await res.json();
     setText({ text: data.text }); 
 
@@ -39,7 +39,7 @@ const TextForm = () => {
    
     try {
     
-        const response = await fetch("https://demo-deploy0077.herokuapp/text", {
+        const response = await fetch("https://demo-deploy0077.herokuapp.com/text", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(text),

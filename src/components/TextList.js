@@ -7,7 +7,7 @@ const TextList = () => {
   const navigate = useNavigate();
 
   const loadTexts = async () => {
-    const response = await fetch("https://demo-deploy0077.herokuapp/texts");
+    const response = await fetch("https://demo-deploy0077.herokuapp.com/texts");
     const data = await response.json();
     console.log(data)
     setText(data);
@@ -15,7 +15,7 @@ const TextList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://demo-deploy0077.herokuapp/texts/${id}`, {
+      await fetch(`https://demo-deploy0077.herokuapp.com/texts/${id}`, {
         method: "DELETE",
       });
       setText(texts.filter((e) => e.id !== id));
