@@ -25,7 +25,7 @@ export default function ButtonAppBar() {
         variant="outlined"
         onClick={() => navigate("/text/new")}
             >
-              New Text
+              enter Word
             </Button>
           </Toolbar>
         </Container>
